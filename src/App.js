@@ -47,17 +47,22 @@ class App extends Component {
     }else{
       this.timerDone = true;
       this.playAlarm();
-      this.finishedTask();
+      // this.finishedTask();
     }
   };
 
   playAlarm = () => {
-    console.log("ding ding ding");
+    //document.getElementById("#alarm-audio").play();
+    this.refs.alarm_audio.play();
+  }
+
+  stopAlarm = () => {
+    this.refs.alarm_audio.pause();
   }
 
   finishedTask = () => {
     this.stopTimer();
-
+    this.stopAlarm();
     if(this.state.elapsedSeconds === 0) {
       return; //no task was running
     }
@@ -83,6 +88,7 @@ class App extends Component {
           />
           <FinishedList finishedTasks={this.state.tasks} />
         </div>
+        <audio src="alarm.mp3" loop={true} ref="alarm_audio" id="alarm-audio" />
       </React.Fragment>
     );
   }

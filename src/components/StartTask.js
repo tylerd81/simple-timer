@@ -21,13 +21,13 @@ export default class StartTask extends Component {
 
 
       case "time-10":
-        startTask(this.state.taskNameInput,5);// 10 * 60);
+        startTask(this.state.taskNameInput, 10 * 60);
         break;
       case "time-20":
-        startTask(this.state.taskNameInput, 6); //20 * 60);
+        startTask(this.state.taskNameInput, 20 * 60);
         break;
       case "time-30":
-        startTask(this.state.taskNameInput, 7); //30 * 60);
+        startTask(this.state.taskNameInput, 30 * 60);
         break;
       default:
         return;
