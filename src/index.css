@@ -1,14 +1,114 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto";
+  font-weight: 300;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#st-main-container {
+  width: 70vw;
+  margin: 1rem auto;
+}
+
+.add-task-container {
+  display: flex;
+}
+
+.add-task-container button, .add-task-container input {
+  display: block;
+}
+
+.add-task-button {
+  flex: 2;
+}
+
+.add-task-input {
+  flex: 5;
+  font-size: 2rem;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: solid 1px #000;
+}
+
+.break-button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+button {
+  font-size: 2rem;
+  outline: none;
+  background-color: #3535f1;
+  color: white;
+  border: solid 1px #000;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #000;
+}
+
+button:active {
+  box-shadow: none;
+}
+
+
+.controls-container button, .timer-container button {
+  margin: .3rem  1rem .3rem 0;
+}
+
+.lower-container {
+  display: flex;
+  width: 70vw;
+  margin: 1rem auto;
+}
+
+.finished-container {
+  flex: 5;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.timer-container {
+  flex: 2;
+  border: solid 1px #000;
+  border-radius: 5px;
+  padding: 1rem;
+}
+.finished-task-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+.timer-controls {
+  text-align: center;
+}
+.colon {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.timer-display {
+  text-align: center;
+  margin-bottom: 5rem;
+
+}
+
+.minutes-display, .seconds-display {
+  font-size: 5rem; 
+  font-weight: bold; 
+}
+
+.task-name {
+  text-align: center;
+}
+
+.finished-task-name {
+  color: #1d5cd1;
 }
