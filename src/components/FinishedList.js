@@ -12,18 +12,19 @@ export default class FinishedList extends Component {
       let {minutes, seconds} = convertSecondsToTimeObject(task.timeSpent);
       totalTime += task.timeSpent;
       let taskName = task.taskName.length === 0 ? "Untitled Task" : task.taskName;
-
-      return <li key={taskName}><span className="finished-task-name">{taskName}</span>: {minutes} minutes, and {seconds} seconds.</li>
+      let className = taskName.toLowerCase().includes("break") ? "break-task" : "finished-task-name";
+      return <li key={taskName}><span className={className}>{taskName}</span>: {minutes} minutes, and {seconds} seconds.</li>
     });
     
     let totalTimeObj = convertSecondsToTimeObject(totalTime);
 
     return (
     <div className="finished-container">
-      <h3>{totalTimeObj.hours} hours, {totalTimeObj.minutes} minutes spent so far.</h3>
+      <h2>Finished Tasks</h2>
       <ul className="finished-task-list">
         {li}
       </ul>
+      <h3 class="total-time">Total Time: {totalTimeObj.hours} hours, {totalTimeObj.minutes} minutes.</h3>
     </div>
     );
   }

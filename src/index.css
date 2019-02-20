@@ -49,6 +49,7 @@ button {
   border: solid 1px #000;
   border-radius: 5px;
   box-shadow: 2px 2px 2px #000;
+  padding: 5px 10px;
 }
 
 button:active {
@@ -67,25 +68,39 @@ button:active {
 }
 
 .finished-container {
-  flex: 5;
+  flex: 4;
   border: solid 1px #000;
   border-radius: 5px;
   padding: 1rem;
   margin-left: 1rem;
+  box-shadow: 3px 3px 3px #4e4e4e;
+}
+
+.finished-container h2 {
+  margin: 0;
+  border-bottom: solid 2px #000;
 }
 
 .timer-container {
-  flex: 2;
+  flex: 3;
   border: solid 1px #000;
   border-radius: 5px;
   padding: 1rem;
+  box-shadow: 3px 3px 3px #4e4e4e;
 }
+
 .finished-task-list {
   list-style-type: none;
   padding: 0;
   font-size: 1.5rem;
 }
 
+.total-time {
+  border-top: solid 2px #000;
+  margin: 0;
+  padding: 0;
+  color: #3535f1;
+}
 .timer-controls {
   text-align: center;
 }
@@ -97,6 +112,7 @@ button:active {
 .timer-display {
   text-align: center;
   margin-bottom: 5rem;
+  
 
 }
 
@@ -111,4 +127,8 @@ button:active {
 
 .finished-task-name {
   color: #1d5cd1;
+}
+
+.break-task {
+  color: #3ab13a;
 }
